@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #e8ecf1 !important; /* Светло-серый фон из прототипа */
+  background-color: #e8ecf1 !important; 
   color: #1B1F3B !important;
   margin: 0;
   padding: 0;
@@ -12,22 +12,3 @@ body {
 }
 
 a, a:visited { text-decoration: none !important; }
-
-/* Стили для карточек */
-.card-light {
-  background-color: #F0F4F8;
-  border-radius: 12px;
-  padding: 24px;
-  border-left: 4px solid #2EC4A6; /* По умолчанию зеленая */
-}
-
-/* Стили для формулы */
-.formula-dark {
-  background: #1B1F3B;
-  color: #2EC4A6;
-  padding: 24px;
-  border-radius: 12px;
-  font-family: 'Courier New', monospace;
-  font-size: 16px;
-  overflow-x: auto;
-}

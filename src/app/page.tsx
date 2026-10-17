@@ -14,14 +14,11 @@ export default function HomePage() {
       
       {/* HERO SECTION */}
       <section id="hero" className="w-full bg-gradient-to-br from-[#1B1F3B] to-[#252a52] text-[#F0F4F8] py-20">
-        <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
-          
-          {/* Круг с логотипом и гаммой */}
+        <div className="w-full max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
           <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-tr from-[#2EC4A6] via-[#8B5CF6] to-transparent flex items-center justify-center relative flex-shrink-0">
             <span className="text-6xl" aria-hidden="true">🦄</span>
             <span className="absolute top-[20%] right-[30%] bg-[#F0A6CA] text-[#1B1F3B] font-bold rounded-full w-10 h-10 flex items-center justify-center text-xl">γ</span>
           </div>
-          
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold tracking-[8px] mb-3 text-[#F0F4F8]">SCIR</h1>
             <p className="text-[#2EC4A6] text-lg font-bold mb-6">Ranking without History</p>
@@ -39,7 +36,7 @@ export default function HomePage() {
 
       {/* ЦИФРЫ ПРОЕКТА */}
       <section className="w-full py-16 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Цифры проекта
@@ -67,7 +64,7 @@ export default function HomePage() {
 
       {/* АЛГОРИТМ */}
       <section id="algorithm" className="w-full py-16 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Как работает алгоритм
@@ -75,7 +72,7 @@ export default function HomePage() {
           <div className="bg-[#1B1F3B] text-[#2EC4A6] p-8 rounded-xl font-mono text-lg overflow-x-auto mb-8 shadow-md flex justify-center">
             <Formula block latex={String.raw`s(u,i) = (1 - \gamma(u)) \cdot \langle u, e_i \rangle + \gamma(u) \cdot \frac{\log(1+\text{pop}_i)}{\max_{j \in I} \log(1+\text{pop}_j)}`} />
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
+          <p className="text-lg text-gray-700 leading-relaxed">
             SCIR объединяет два сигнала: смысловой (эмбеддинги Sentence-BERT) и статистический (популярность товаров по закону Ципфа). Баланс между ними настраивается автоматически через параметр γ(u), который зависит от длины истории пользователя.
           </p>
         </div>
@@ -83,7 +80,7 @@ export default function HomePage() {
 
       {/* РЕЗУЛЬТАТЫ */}
       <section id="results" className="w-full py-16 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Результаты
@@ -115,7 +112,7 @@ export default function HomePage() {
 
       {/* ДЛЯ КОГО */}
       <section className="w-full py-16 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Для кого этот проект
@@ -142,8 +139,8 @@ export default function HomePage() {
       </section>
 
       {/* CTA БЛОК */}
-      <section className="w-full py-20 bg-[#1B1F3B] text-[#F0F4F8] text-center">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="w-full py-20 bg-[#1B1F3B] text-[#F0F4F8]">
+        <div className="w-full max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Готовы попробовать SCIR?</h2>
           <p className="text-lg opacity-85 mb-8">Оставьте заявку на пилот или скачайте репозиторий</p>
           <div className="flex justify-center gap-4 flex-wrap">
@@ -159,14 +156,14 @@ export default function HomePage() {
 
       {/* ФОРМА */}
       <section id="contact" className="w-full py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="w-full max-w-4xl mx-auto px-8">
           <B2BForm />
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="w-full bg-[#1B1F3B] text-[#F0F4F8] py-12">
-        <div className="max-w-6xl mx-auto px-8 flex flex-wrap justify-between gap-8 text-sm">
+        <div className="w-full max-w-6xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
           <div>
             <h4 className="text-[#2EC4A6] font-bold mb-3 text-base">SCIR</h4>
             <p className="opacity-75">Ranking without History</p>
@@ -195,7 +192,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-
     </main>
   );
 }
