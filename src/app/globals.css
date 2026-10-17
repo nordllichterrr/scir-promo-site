@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #F0F4F8 !important;
-  color: #1B1F3B !important;
+  background-color: #ffffff !important; /* Белый фон */
+  color: #1B1F3B !important; /* Темный текст */
   min-height: 100vh;
   margin: 0;
   font-family: 'Montserrat', sans-serif;

@@ -11,51 +11,51 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="flex flex-col min-h-screen bg-[#F0F4F8]">
+    <main className="flex flex-col min-h-screen bg-white">
       
-      {/* HERO SECTION (Темно-синий блок) */}
-      <section className="bg-[#1B1F3B] w-full pt-12 pb-20">
+      {/* 1. HERO SECTION (Светлый) */}
+      <section id="hero" className="w-full py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-          <div className="w-48 h-48 rounded-full bg-gradient-to-tr from-[#2EC4A6]/30 via-[#8B5CF6]/30 to-transparent flex items-center justify-center relative flex-shrink-0 border border-white/10">
-            <img src="/logo.jpg" alt="SCIR" className="w-32 h-32 object-cover rounded-full" />
+          
+          {/* Круг с логотипом и гаммой */}
+          <div className="w-40 h-40 rounded-full bg-gradient-to-tr from-[#2EC4A6]/20 via-[#8B5CF6]/20 to-transparent flex items-center justify-center relative flex-shrink-0 border border-gray-100">
+            <img src="/logo.jpg" alt="SCIR" className="w-28 h-28 object-cover rounded-full" />
             <span className="absolute -top-2 -right-2 bg-[#F0A6CA] text-[#1B1F3B] font-bold rounded-full w-10 h-10 flex items-center justify-center text-xl shadow-lg">γ</span>
           </div>
           
           <div className="text-center md:text-left">
-            <h1 className="text-5xl md:text-6xl font-black tracking-widest text-white mb-2">SCIR</h1>
+            <h1 className="text-5xl md:text-6xl font-black tracking-widest text-[#1B1F3B] mb-2">SCIR</h1>
             <p className="text-[#2EC4A6] text-xl font-bold mb-8">Ranking without History</p>
             <div className="flex gap-4 justify-center md:justify-start flex-wrap">
-              <a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="bg-[#F0A6CA] text-[#1B1F3B] px-6 py-3 rounded-lg font-bold hover:bg-pink-400 transition shadow-md">
+              <a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="bg-[#F0A6CA] text-[#1B1F3B] px-6 py-3 rounded-lg font-bold hover:bg-pink-400 transition shadow-sm">
                 Скачать репозиторий
               </a>
-              <Link href="#contact" className="border-2 border-[#2EC4A6] text-[#2EC4A6] px-6 py-3 rounded-lg font-bold hover:bg-[#2EC4A6] hover:text-[#1B1F3B] transition shadow-md">
+              <a href="#contact" className="border-2 border-[#2EC4A6] text-[#2EC4A6] px-6 py-3 rounded-lg font-bold hover:bg-[#2EC4A6] hover:text-white transition shadow-sm">
                 Оставить заявку
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* БЛОК ЦИФРЫ ПРОЕКТА */}
-      <section className="w-full bg-white py-16">
+      {/* 2. БЛОК ЦИФРЫ ПРОЕКТА */}
+      <section className="w-full py-20 bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-black mb-8 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4 flex items-center">
-            Цифры проекта
-          </h2>
+          <h2 className="text-3xl font-black mb-10 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4">Цифры проекта</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-[#2EC4A6] shadow-sm">
+            <div className="bg-white rounded-xl p-6 border-t-4 border-[#2EC4A6] shadow-sm">
               <div className="text-3xl font-black text-[#8B5CF6] mb-2">0.548</div>
               <div className="text-sm text-gray-500 font-medium">HR@10 на MovieLens-25M</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-[#8B5CF6] shadow-sm">
+            <div className="bg-white rounded-xl p-6 border-t-4 border-[#8B5CF6] shadow-sm">
               <div className="text-3xl font-black text-[#8B5CF6] mb-2">0.1243</div>
               <div className="text-sm text-gray-500 font-medium">nDCG@10 на MovieLens-25M</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-[#F0A6CA] shadow-sm">
+            <div className="bg-white rounded-xl p-6 border-t-4 border-[#F0A6CA] shadow-sm">
               <div className="text-3xl font-black text-[#8B5CF6] mb-2">1.8 мс</div>
               <div className="text-sm text-gray-500 font-medium">Задержка на CPU</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-[#2EC4A6] shadow-sm">
+            <div className="bg-white rounded-xl p-6 border-t-4 border-[#2EC4A6] shadow-sm">
               <div className="text-3xl font-black text-[#8B5CF6] mb-2">3400×</div>
               <div className="text-sm text-gray-500 font-medium">Быстрее кросс-энкодера</div>
             </div>
@@ -63,13 +63,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* БЛОК АЛГОРИТМА */}
-      <section className="w-full bg-white py-16 border-t border-gray-100">
+      {/* 3. БЛОК АЛГОРИТМА */}
+      <section id="algorithm" className="w-full py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-black mb-8 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4 flex items-center">
-            Как работает алгоритм
-          </h2>
-          <div className="bg-[#1B1F3B] text-[#2EC4A6] p-8 rounded-xl font-mono text-sm md:text-lg overflow-x-auto mb-8 shadow-md">
+          <h2 className="text-3xl font-black mb-10 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4">Как работает алгоритм</h2>
+          <div className="bg-gray-50 text-[#1B1F3B] p-8 rounded-xl font-mono text-sm md:text-lg overflow-x-auto mb-8 border border-gray-200">
              <Formula block latex={String.raw`s(u,i) = (1 - \gamma(u)) \cdot \langle u, e_i \rangle + \gamma(u) \cdot \frac{\log(1+\text{pop}_i)}{\max_{j \in I} \log(1+\text{pop}_j)}`} />
           </div>
           <p className="text-gray-600 leading-relaxed text-lg max-w-4xl">
@@ -78,12 +76,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* БЛОК РЕЗУЛЬТАТОВ (Таблица) */}
-      <section className="w-full bg-white py-16 border-t border-gray-100">
+      {/* 4. БЛОК РЕЗУЛЬТАТОВ */}
+      <section id="results" className="w-full py-20 bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-black mb-8 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4 flex items-center">
-            Результаты
-          </h2>
+          <h2 className="text-3xl font-black mb-10 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4">Результаты</h2>
           
           <div className="overflow-hidden rounded-xl shadow-sm border border-gray-200 bg-white text-black">
             <table className="w-full text-base md:text-lg text-left border-collapse">
@@ -110,13 +106,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* БЛОК ДЛЯ КОГО (Карточки) */}
-      <section className="w-full bg-white py-16 border-t border-gray-100">
+      {/* 5. БЛОК ДЛЯ КОГО */}
+      <section id="audience" className="w-full py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-black mb-8 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4 flex items-center">
-            Для кого этот проект
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <h2 className="text-3xl font-black mb-10 text-[#1B1F3B] border-l-4 border-[#8B5CF6] pl-4">Для кого этот проект</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-[#2EC4A6]">
               <div className="text-3xl font-black text-[#8B5CF6] mb-1">01</div>
               <div className="text-sm text-gray-600 font-medium">Исследователи ML</div>
@@ -137,55 +131,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* БЛОК CTA (Темный) */}
-      <section className="w-full bg-[#1B1F3B] py-16 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-black text-white mb-4 border-l-4 border-[#8B5CF6] pl-4 inline-block">Готовы попробовать SCIR?</h2>
-          <p className="text-gray-300 mb-8 mt-2">Оставьте заявку на пилот или скачайте репозиторий</p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="#contact" className="bg-[#F0A6CA] text-[#1B1F3B] px-8 py-3 rounded-lg font-bold hover:bg-pink-400 transition shadow-md">
-              Оставить заявку
-            </Link>
-            <a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="border-2 border-[#2EC4A6] text-[#2EC4A6] px-8 py-3 rounded-lg font-bold hover:bg-[#2EC4A6] hover:text-[#1B1F3B] transition shadow-md">
-              Скачать репозиторий
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* БЛОК ФОРМЫ */}
-      <section id="contact" className="w-full bg-white py-16">
+      {/* 6. БЛОК ФОРМЫ (Салатовый фон) */}
+      <section id="contact" className="w-full py-20 bg-[#2EC4A6]/10 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6">
           <B2BForm />
         </div>
       </section>
 
-      {/* FOOTER (Темный, как на скрине) */}
-      <footer className="bg-[#1B1F3B] text-white py-12 rounded-t-3xl">
+      {/* 7. FOOTER (Светлый) */}
+      <footer className="bg-white border-t border-gray-200 py-12">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h4 className="font-black text-[#2EC4A6] mb-3">SCIR</h4>
-            <p className="text-sm text-gray-400">Ranking without History</p>
+            <h4 className="font-black text-[#1B1F3B] mb-3">SCIR</h4>
+            <p className="text-sm text-gray-500">Ranking without History</p>
           </div>
           <div>
-            <h4 className="font-black text-[#2EC4A6] mb-3">Разделы</h4>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li><a href="#" className="hover:text-white transition">О проекте</a></li>
-              <li><a href="/algorithm" className="hover:text-white transition">Алгоритм</a></li>
-              <li><a href="/results" className="hover:text-white transition">Результаты</a></li>
+            <h4 className="font-black text-[#1B1F3B] mb-3">Разделы</h4>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li><a href="#hero" className="hover:text-[#8B5CF6] transition">О проекте</a></li>
+              <li><a href="#algorithm" className="hover:text-[#8B5CF6] transition">Алгоритм</a></li>
+              <li><a href="#results" className="hover:text-[#8B5CF6] transition">Результаты</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-black text-[#2EC4A6] mb-3">Ресурсы</h4>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li><a href="#" className="hover:text-white transition">Репозиторий</a></li>
-              <li><a href="#" className="hover:text-white transition">Документация</a></li>
-              <li><a href="#" className="hover:text-white transition">Блог</a></li>
+            <h4 className="font-black text-[#1B1F3B] mb-3">Ресурсы</h4>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li><a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="hover:text-[#8B5CF6] transition">Репозиторий</a></li>
+              <li><a href="#" className="hover:text-[#8B5CF6] transition">Документация</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-black text-[#2EC4A6] mb-3">Контакты</h4>
-            <ul className="text-sm text-gray-400 space-y-2">
+            <h4 className="font-black text-[#1B1F3B] mb-3">Контакты</h4>
+            <ul className="text-sm text-gray-500 space-y-2">
               <li>lemdyasova68@gmail.com</li>
               <li>zmanovskiy.n.v@gmail.com</li>
             </ul>
