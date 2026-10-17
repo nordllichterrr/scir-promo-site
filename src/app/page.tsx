@@ -12,9 +12,9 @@ export default function HomePage() {
   return (
     <main className="flex flex-col min-h-screen">
       
-      {/* HERO SECTION (Градиентный, как в прототипе) */}
-      <section id="hero" className="bg-gradient-to-br from-[#1B1F3B] to-[#252a52] text-[#F0F4F8] py-16 px-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      {/* HERO SECTION */}
+      <section id="hero" className="w-full bg-gradient-to-br from-[#1B1F3B] to-[#252a52] text-[#F0F4F8] py-20">
+        <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-12">
           
           {/* Круг с логотипом и гаммой */}
           <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-tr from-[#2EC4A6] via-[#8B5CF6] to-transparent flex items-center justify-center relative flex-shrink-0">
@@ -37,27 +37,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ЦИФРЫ ПРОЕКТА (Светлые карточки) */}
-      <section className="py-12 px-8 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto">
+      {/* ЦИФРЫ ПРОЕКТА */}
+      <section className="w-full py-16 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Цифры проекта
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-            <div className="card-light border-l-[#2EC4A6]">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#2EC4A6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">0.548</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">HR@10 на MovieLens-25M</div>
             </div>
-            <div className="card-light border-l-[#8B5CF6]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#8B5CF6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">0.1243</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">nDCG@10 на MovieLens-25M</div>
             </div>
-            <div className="card-light border-l-[#F0A6CA]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#F0A6CA]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">1.8 мс</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Задержка на CPU</div>
             </div>
-            <div className="card-light border-l-[#2EC4A6]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#2EC4A6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">3400×</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Быстрее кросс-энкодера</div>
             </div>
@@ -66,45 +66,45 @@ export default function HomePage() {
       </section>
 
       {/* АЛГОРИТМ */}
-      <section id="algorithm" className="py-12 px-8 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto">
+      <section id="algorithm" className="w-full py-16 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Как работает алгоритм
           </h2>
-          <div className="formula-dark mb-6 shadow-md">
+          <div className="bg-[#1B1F3B] text-[#2EC4A6] p-8 rounded-xl font-mono text-lg overflow-x-auto mb-8 shadow-md flex justify-center">
             <Formula block latex={String.raw`s(u,i) = (1 - \gamma(u)) \cdot \langle u, e_i \rangle + \gamma(u) \cdot \frac{\log(1+\text{pop}_i)}{\max_{j \in I} \log(1+\text{pop}_j)}`} />
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
             SCIR объединяет два сигнала: смысловой (эмбеддинги Sentence-BERT) и статистический (популярность товаров по закону Ципфа). Баланс между ними настраивается автоматически через параметр γ(u), который зависит от длины истории пользователя.
           </p>
         </div>
       </section>
 
       {/* РЕЗУЛЬТАТЫ */}
-      <section id="results" className="py-12 px-8 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto">
+      <section id="results" className="w-full py-16 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Результаты
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left border-collapse">
+          <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-200">
+            <table className="w-full text-base text-left border-collapse">
               <thead>
                 <tr className="bg-[#1B1F3B] text-[#F0F4F8]">
-                  <th className="px-4 py-3 font-semibold rounded-tl-lg">Модель</th>
-                  <th className="px-4 py-3 font-semibold">HR@10</th>
-                  <th className="px-4 py-3 font-semibold">nDCG@10</th>
-                  <th className="px-4 py-3 font-semibold rounded-tr-lg">Задержка</th>
+                  <th className="px-6 py-4 font-semibold">Модель</th>
+                  <th className="px-6 py-4 font-semibold">HR@10</th>
+                  <th className="px-6 py-4 font-semibold">nDCG@10</th>
+                  <th className="px-6 py-4 font-semibold">Задержка</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r) => (
                   <tr key={r.model} className={r.highlight ? 'bg-[#F0A6CA] font-bold text-[#1B1F3B]' : 'even:bg-[#F0F4F8] border-b border-gray-100 text-[#1B1F3B]'}>
-                    <td className="px-4 py-3">{r.model}</td>
-                    <td className="px-4 py-3">{r.hr}</td>
-                    <td className="px-4 py-3">{r.ndcg}</td>
-                    <td className="px-4 py-3">{r.latency}</td>
+                    <td className="px-6 py-4">{r.model}</td>
+                    <td className="px-6 py-4">{r.hr}</td>
+                    <td className="px-6 py-4">{r.ndcg}</td>
+                    <td className="px-6 py-4">{r.latency}</td>
                   </tr>
                 ))}
               </tbody>
@@ -114,26 +114,26 @@ export default function HomePage() {
       </section>
 
       {/* ДЛЯ КОГО */}
-      <section className="py-12 px-8 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full py-16 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
             <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
             Для кого этот проект
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-            <div className="card-light border-l-[#2EC4A6]">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#2EC4A6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">01</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Исследователи ML</div>
             </div>
-            <div className="card-light border-l-[#8B5CF6]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#8B5CF6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">02</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Инженеры продакшена</div>
             </div>
-            <div className="card-light border-l-[#F0A6CA]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#F0A6CA]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">03</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Продуктовые аналитики</div>
             </div>
-            <div className="card-light border-l-[#2EC4A6]">
+            <div className="bg-[#F0F4F8] rounded-xl p-6 border-l-4 border-[#2EC4A6]">
               <div className="text-3xl font-bold text-[#8B5CF6] mb-2">04</div>
               <div className="text-sm text-[#1B1F3B] opacity-75">Корпоративные клиенты</div>
             </div>
@@ -141,9 +141,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA БЛОК (Темный) */}
-      <section className="py-16 px-8 bg-[#1B1F3B] text-[#F0F4F8] text-center">
-        <div className="max-w-4xl mx-auto">
+      {/* CTA БЛОК */}
+      <section className="w-full py-20 bg-[#1B1F3B] text-[#F0F4F8] text-center">
+        <div className="max-w-4xl mx-auto px-8">
           <h2 className="text-3xl font-bold mb-4">Готовы попробовать SCIR?</h2>
           <p className="text-lg opacity-85 mb-8">Оставьте заявку на пилот или скачайте репозиторий</p>
           <div className="flex justify-center gap-4 flex-wrap">
@@ -158,15 +158,15 @@ export default function HomePage() {
       </section>
 
       {/* ФОРМА */}
-      <section id="contact" className="py-12 px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
+      <section id="contact" className="w-full py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-8">
           <B2BForm />
         </div>
       </section>
 
-      {/* FOOTER (Темный) */}
-      <footer className="bg-[#1B1F3B] text-[#F0F4F8] py-10 px-8">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-between gap-8 text-sm">
+      {/* FOOTER */}
+      <footer className="w-full bg-[#1B1F3B] text-[#F0F4F8] py-12">
+        <div className="max-w-6xl mx-auto px-8 flex flex-wrap justify-between gap-8 text-sm">
           <div>
             <h4 className="text-[#2EC4A6] font-bold mb-3 text-base">SCIR</h4>
             <p className="opacity-75">Ranking without History</p>
