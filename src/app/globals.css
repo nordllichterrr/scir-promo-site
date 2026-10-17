@@ -4,34 +4,30 @@
 @tailwind utilities;
 
 body {
-  background-color: #ffffff !important;
+  background-color: #e8ecf1 !important; /* Светло-серый фон из прототипа */
   color: #1B1F3B !important;
   margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 a, a:visited { text-decoration: none !important; }
 
-/* Принудительные отступы для верхнего меню */
-.top-menu {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 3.5rem !important; /* Огромный отступ между словами */
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Стили для карточек */
+.card-light {
+  background-color: #F0F4F8;
+  border-radius: 12px;
+  padding: 24px;
+  border-left: 4px solid #2EC4A6; /* По умолчанию зеленая */
 }
 
-.top-menu a {
-  color: #1B1F3B !important; /* Темно-синий цвет */
-  font-weight: 800 !important;
-  font-size: 1rem !important;
-  text-transform: uppercase !important;
-  transition: color 0.2s ease !important;
-}
-
-.top-menu a:hover {
-  color: #8B5CF6 !important; /* Фиолетовый при наведении */
+/* Стили для формулы */
+.formula-dark {
+  background: #1B1F3B;
+  color: #2EC4A6;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  overflow-x: auto;
 }
