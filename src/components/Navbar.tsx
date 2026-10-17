@@ -10,11 +10,12 @@ export default function Navbar() {
           <img src="/logo.jpg" alt="SCIR" className="h-10 w-auto rounded" />
         </Link>
 
-        {/* Меню-якоря (Черный текст) */}
-        <ul className="flex flex-row gap-8 list-none m-0 p-0">
-          <li><a href="#hero" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-lg transition-colors uppercase">Главная</a></li>
-          <li><a href="#algorithm" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-lg transition-colors uppercase">Алгоритм</a></li>
-          <li><a href="#contact" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-lg transition-colors uppercase">Заявка</a></li>
+        {/* Меню */}
+        <ul className="flex flex-row gap-6 md:gap-8 list-none m-0 p-0">
+          <li><Link href="/" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-sm md:text-base transition-colors uppercase">Главная</Link></li>
+          <li><Link href="/algorithm" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-sm md:text-base transition-colors uppercase">Алгоритм</Link></li>
+          <li><Link href="/results" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-sm md:text-base transition-colors uppercase">Результаты</Link></li>
+          <li><Link href="/contact" className="text-[#1B1F3B] hover:text-scir-amethyst font-extrabold text-sm md:text-base transition-colors uppercase">Заявка</Link></li>
         </ul>
       </div>
     </nav>

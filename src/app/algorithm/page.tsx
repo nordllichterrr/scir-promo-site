@@ -1,0 +1,26 @@
+import Formula from '@/components/Formula';
+
+export default function AlgorithmPage() {
+  return (
+    <main className="min-h-screen py-16 px-6 max-w-5xl mx-auto">
+      <h1 className="text-4xl md:text-5xl font-black mb-10 border-l-8 border-scir-amethyst pl-6 text-[#1B1F3B]">Как работает алгоритм</h1>
+      
+      <div className="bg-white p-8 rounded-3xl shadow-sm mb-10 flex justify-center overflow-x-auto border border-gray-200">
+        <Formula block latex={String.raw`s(u,i) = (1 - \gamma(u)) \cdot \langle u, e_i \rangle + \gamma(u) \cdot \frac{\log(1+\text{pop}_i)}{\max_{j \in I} \log(1+\text{pop}_j)}`} />
+      </div>
+
+      <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
+        <p>
+          <strong className="font-extrabold text-[#1B1F3B]">SCIR</strong> объединяет два сигнала: смысловой (эмбеддинги Sentence-BERT) и статистический (популярность товаров по закону Ципфа). Баланс между ними настраивается автоматически через параметр <span className="text-scir-amethyst font-bold"><Formula latex={String.raw`\gamma(u)`} /></span>.
+        </p>
+        <p>Параметр гейтинга вычисляется как:</p>
+        <div className="bg-white p-6 rounded-2xl border border-gray-200 inline-block shadow-sm">
+          <Formula block latex={String.raw`\gamma(u) = \frac{\gamma_{\text{base}}}{1 + 0.05 \cdot \min(|H_u|, 20)}`} />
+        </div>
+        <p>
+          где <Formula latex={String.raw`\gamma_{\text{base}} = 0.45`} />, а <Formula latex={String.raw`|H_u|`} /> — длина истории взаимодействий пользователя.
+        </p>
+      </div>
+    </main>
+  );
+}
