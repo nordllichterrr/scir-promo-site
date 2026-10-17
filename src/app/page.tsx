@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Formula from '@/components/Formula';
 import B2BForm from '@/components/B2BForm';
 
@@ -13,26 +12,26 @@ export default function HomePage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
       
-      {/* 1. HERO SECTION (Только один логотип по центру) */}
-      <section id="hero" className="w-full py-32 bg-white flex flex-col items-center justify-center text-center px-6">
+      {/* 1. HERO SECTION - ЕДИНСТВЕННЫЙ ЛОГОТИП */}
+      <section id="hero" className="w-full py-24 bg-white flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-5xl flex flex-col items-center gap-10">
           
-          {/* Единственный логотип, без кругов и дублей */}
+          {/* Тут только одна картинка логотипа, никаких кругов */}
           <img 
             src="/logo.jpg" 
             alt="SCIR Logo" 
-            className="w-[80%] md:w-[60%] max-w-3xl h-auto object-contain rounded-xl shadow-sm" 
+            className="w-[80%] md:w-[60%] max-w-3xl h-auto object-contain" 
           />
           
-          <div className="flex flex-col items-center gap-6 mt-4">
-            <p className="text-2xl md:text-4xl text-[#2EC4A6] font-bold tracking-wide">Ranking without History</p>
-            <p className="text-xl md:text-3xl text-gray-600 max-w-4xl leading-relaxed font-medium">
+          <div className="flex flex-col items-center gap-6 mt-6">
+            <p className="text-2xl md:text-4xl text-[#2EC4A6] font-black tracking-wide uppercase">Ranking without History</p>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl leading-relaxed font-medium">
               Индуктивный алгоритм рекомендаций для холодного старта. <br className="hidden md:block"/>
               Мы возвращаем системам способность работать там, где истории ещё нет.
             </p>
           </div>
 
-          <div className="flex gap-8 justify-center flex-wrap mt-10">
+          <div className="flex gap-6 justify-center flex-wrap mt-8">
             <a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="bg-[#F0A6CA] text-[#1B1F3B] px-10 py-5 rounded-2xl font-black text-xl hover:bg-pink-400 transition shadow-lg hover:-translate-y-1">
               Скачать репозиторий
             </a>
@@ -145,7 +144,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FOOTER */}
+      {/* 7. FOOTER (Без логотипа, только текст) */}
       <footer className="bg-white border-t border-gray-200 py-16">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12">
           <div>
