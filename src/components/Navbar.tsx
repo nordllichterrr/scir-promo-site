@@ -9,6 +9,7 @@ export default function Navbar() {
           <li><a href="#algorithm">Алгоритм</a></li>
           <li><a href="#results">Результаты</a></li>
           <li><a href="#audience">Для кого</a></li>
+          <li><a href="https://zenodo.org/records/22146633" target="_blank" rel="noopener noreferrer">Статья</a></li>
           <li><a href="#contact">Контакты</a></li>
         </ul>
       </div>

@@ -163,7 +163,7 @@ export default function HomePage() {
             <h4 className="text-2xl font-black text-[#1B1F3B] mb-4">Ресурсы</h4>
             <ul className="text-lg text-gray-500 space-y-3">
               <li><a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="hover:text-[#8B5CF6] transition">Репозиторий</a></li>
-              <li><a href="#" className="hover:text-[#8B5CF6] transition">Документация</a></li>
+              <li><a href="https://zenodo.org/records/22146633" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B5CF6] transition">Статья</a></li>
             </ul>
           </div>
           <div>
