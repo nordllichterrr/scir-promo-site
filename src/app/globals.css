@@ -4,11 +4,34 @@
 @tailwind utilities;
 
 body {
-  background-color: #ffffff !important; /* Белый фон */
-  color: #1B1F3B !important; /* Темный текст */
-  min-height: 100vh;
+  background-color: #ffffff !important;
+  color: #1B1F3B !important;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 a, a:visited { text-decoration: none !important; }
+
+/* Принудительные отступы для верхнего меню */
+.top-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 3.5rem !important; /* Огромный отступ между словами */
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.top-menu a {
+  color: #1B1F3B !important; /* Темно-синий цвет */
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  transition: color 0.2s ease !important;
+}
+
+.top-menu a:hover {
+  color: #8B5CF6 !important; /* Фиолетовый при наведении */
+}
