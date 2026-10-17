@@ -13,24 +13,26 @@ export default function HomePage() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
       
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (Только один логотип по центру) */}
       <section id="hero" className="w-full py-32 bg-white flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-5xl flex flex-col items-center gap-10">
           
-          {/* Логотип без круга, просто картинка */}
-          <img src="/logo.jpg" alt="SCIR Logo" className="w-64 md:w-80 h-auto object-contain drop-shadow-md" />
+          {/* Единственный логотип, без кругов и дублей */}
+          <img 
+            src="/logo.jpg" 
+            alt="SCIR Logo" 
+            className="w-[80%] md:w-[60%] max-w-3xl h-auto object-contain rounded-xl shadow-sm" 
+          />
           
-          <div className="flex flex-col items-center gap-6">
-            <h1 className="text-6xl md:text-8xl font-black tracking-widest text-[#1B1F3B]">SCIR</h1>
+          <div className="flex flex-col items-center gap-6 mt-4">
             <p className="text-2xl md:text-4xl text-[#2EC4A6] font-bold tracking-wide">Ranking without History</p>
+            <p className="text-xl md:text-3xl text-gray-600 max-w-4xl leading-relaxed font-medium">
+              Индуктивный алгоритм рекомендаций для холодного старта. <br className="hidden md:block"/>
+              Мы возвращаем системам способность работать там, где истории ещё нет.
+            </p>
           </div>
 
-          <p className="text-xl md:text-3xl text-gray-600 max-w-3xl leading-relaxed font-medium">
-            Индуктивный алгоритм рекомендаций для холодного старта. <br className="hidden md:block"/>
-            Мы возвращаем системам способность работать там, где истории ещё нет.
-          </p>
-
-          <div className="flex gap-8 justify-center flex-wrap mt-8">
+          <div className="flex gap-8 justify-center flex-wrap mt-10">
             <a href="https://github.com/nikita-zmanovskiy/cold-start-algorithm" target="_blank" className="bg-[#F0A6CA] text-[#1B1F3B] px-10 py-5 rounded-2xl font-black text-xl hover:bg-pink-400 transition shadow-lg hover:-translate-y-1">
               Скачать репозиторий
             </a>
