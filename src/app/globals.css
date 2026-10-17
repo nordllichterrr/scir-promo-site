@@ -1,19 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background-color: #0F1225 !important;
-  color: #F0F4F8 !important;
+  background-color: #ffffff !important;
+  color: #1B1F3B !important;
+  min-height: 100vh;
   margin: 0;
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a, a:visited { text-decoration: none !important; }
-
-/* Стили для карточек */
-.card-glass {
-  background-color: rgba(27, 31, 59, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
