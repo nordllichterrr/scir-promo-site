@@ -24,41 +24,41 @@ export default function B2BForm() {
   return (
     <div className="w-full">
       {status === 'success' && <div className="bg-green-500 text-white px-6 py-4 rounded-xl mb-6 text-center font-bold text-xl shadow-lg">Заявка отправлена!</div>}
-      {status === 'error' && <div className="bg-red-500 text-white px-6 py-4 rounded-xl mb-6 text-center font-bold text-xl shadow-lg">Ошибка отправки.</div>}
       
-      <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.6)] overflow-hidden border-4 border-white/30 text-black">
-        <div className="p-6 md:p-12 space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center border-b-2 border-gray-100 pb-8">
-            <label className="font-black text-2xl md:text-3xl">Имя *</label>
+      <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.5)] overflow-hidden border-4 border-white/20 p-6 md:p-10 text-black">
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-200 pb-6">
+            <label className="font-black text-xl">Имя *</label>
             <div className="md:col-span-2">
-              <input name="name" required className="w-full p-5 text-xl rounded-xl border-2 border-gray-300 text-black bg-gray-50 focus:border-scir-emerald outline-none" placeholder="Иван Иванов" />
+              <input name="name" required className="w-full p-4 text-lg rounded-xl border-2 border-gray-300 bg-gray-50 focus:border-scir-emerald outline-none" placeholder="Иван Иванов" />
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center border-b-2 border-gray-100 pb-8">
-            <label className="font-black text-2xl md:text-3xl">Компания *</label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-200 pb-6">
+            <label className="font-black text-xl">Компания *</label>
             <div className="md:col-span-2">
-              <input name="company" required className="w-full p-5 text-xl rounded-xl border-2 border-gray-300 text-black bg-gray-50 focus:border-scir-emerald outline-none" placeholder="ООО Ромашка" />
+              <input name="company" required className="w-full p-4 text-lg rounded-xl border-2 border-gray-300 bg-gray-50 focus:border-scir-emerald outline-none" placeholder="ООО Ромашка" />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center border-b-2 border-gray-100 pb-8">
-            <label className="font-black text-2xl md:text-3xl">Email *</label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-200 pb-6">
+            <label className="font-black text-xl">Email *</label>
             <div className="md:col-span-2">
-              <input type="email" name="email" required className="w-full p-5 text-xl rounded-xl border-2 border-gray-300 text-black bg-gray-50 focus:border-scir-emerald outline-none" placeholder="ivan@company.com" />
+              <input type="email" name="email" required className="w-full p-4 text-lg rounded-xl border-2 border-gray-300 bg-gray-50 focus:border-scir-emerald outline-none" placeholder="ivan@company.com" />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-start pb-8">
-            <label className="font-black text-2xl md:text-3xl mt-4">Сообщение *</label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start border-b border-gray-200 pb-6">
+            <label className="font-black text-xl mt-4">Сообщение *</label>
             <div className="md:col-span-2">
-              <textarea name="message" required rows={6} className="w-full p-5 text-xl rounded-xl border-2 border-gray-300 text-black bg-gray-50 focus:border-scir-emerald outline-none" placeholder="Ваше сообщение..." />
+              <textarea name="message" required rows={4} className="w-full p-4 text-lg rounded-xl border-2 border-gray-300 bg-gray-50 focus:border-scir-emerald outline-none" placeholder="Ваше сообщение..." />
             </div>
           </div>
 
-          <div className="flex justify-end pt-4">
-            <button type="submit" disabled={loading} className="bg-scir-amethyst text-white px-12 py-5 rounded-2xl font-black text-2xl hover:bg-purple-600 transition shadow-xl">
-              {loading ? 'Отправка...' : 'Отправить заявку'}
+          {/* ОГРОМНАЯ КНОПКА ОСТАВИТЬ ЗАЯВКУ */}
+          <div className="pt-6">
+            <button type="submit" disabled={loading} className="w-full bg-scir-amethyst text-white py-6 rounded-2xl font-black text-2xl hover:bg-purple-600 hover:scale-[1.02] transition-all shadow-[0_0_20px_rgba(139,92,246,0.4)]">
+              {loading ? 'Отправка...' : 'Оставить заявку'}
             </button>
           </div>
         </div>
