@@ -4,14 +4,10 @@ export default function Navbar() {
   return (
     <nav className="bg-[#070b16]/85 backdrop-blur-md border-b border-[#26325a] sticky top-0 z-50 w-full animate-rise">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Логотип-картинка (единорог) */}
+        {/* Логотип-эмодзи */}
         <Link href="/" className="flex items-center gap-3">
-          <img 
-            src="/logo.jpg" 
-            alt="SCIR Logo" 
-            className="h-10 w-auto rounded-md shadow-[0_0_15px_rgba(0,209,178,0.3)] object-contain" 
-          />
-          <span className="text-xl font-black text-[#e9edff] tracking-widest hidden sm:block">
+          <span className="text-3xl drop-shadow-[0_0_10px_rgba(0,209,178,0.5)]">🦄</span>
+          <span className="text-2xl font-black text-[#e9edff] tracking-widest">
             S<span className="text-[#00d1b2]">C</span>IR
           </span>
         </Link>
