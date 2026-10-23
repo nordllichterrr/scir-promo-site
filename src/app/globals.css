@@ -3,24 +3,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #070b16;
+  --ink: #e9edff;
+  --muted: #94a3c4;
+  --line: #26325a;
+  --diag: #5b8cff;
+  --fail: #ff5b6e;
+  --insight: #ffb020;
+  --hypo: #8b5bff;
+  --method: #00d1b2;
+  --valid: #3ddc84;
+  --res: #ff8a3d;
+  --concl: #ff5b8c;
+}
+
 body {
-  background: radial-gradient(1200px 600px at 15% -10%, #16204a 0%, #070b16 55%, #04060d 100%) !important;
-  color: #e9edff !important;
-  margin: 0;
+  background: radial-gradient(1200px 600px at 15% -10%, #16204a 0%, var(--bg) 55%, #04060d 100%) !important;
+  color: var(--ink) !important;
   font-family: 'Inter', sans-serif;
+  margin: 0;
   min-height: 100vh;
 }
 
 a, a:visited { text-decoration: none !important; color: inherit; }
 
-/* Стили для темных карточек */
+/* Анимация появления (из роадмапа) */
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise .6s ease forwards;
+}
+
+/* Стеклянные карточки */
 .glass-card {
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
-  border: 1px solid #26325a;
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 24px;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .glass-card:hover {
-  transform: translateX(6px);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px -18px var(--line);
+  border-color: var(--ink);
 }
