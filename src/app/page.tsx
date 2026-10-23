@@ -16,7 +16,7 @@ export default function HomePage() {
 
       {/* HERO SECTION */}
       <section id="hero" className="w-full py-24 relative z-10">
-        <div className="w-full max-w-3xl mx-auto px-12 flex flex-col items-center text-center animate-rise">
+        <div className="w-full max-w-2xl mx-auto px-6 flex flex-col items-center text-center animate-rise">
           
           <div className="w-[160px] h-[160px] rounded-full bg-gradient-to-tr from-[#00d1b2]/20 via-[#8b5bff]/20 to-transparent flex items-center justify-center relative mb-8 border border-[#26325a] shadow-[0_0_40px_rgba(0,209,178,0.15)]">
             <span className="text-7xl" aria-hidden="true">🦄</span>
@@ -25,7 +25,7 @@ export default function HomePage() {
           
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 text-white">SCIR</h1>
           <p className="text-[#00d1b2] text-2xl font-bold mb-6 tracking-wide drop-shadow-[0_0_15px_rgba(0,209,178,0.4)]">Ranking without History</p>
-          <p className="text-[#94a3c4] text-lg max-w-lg mb-10 leading-relaxed">
+          <p className="text-[#94a3c4] text-lg max-w-md mb-10 leading-relaxed">
             Индуктивный алгоритм рекомендаций для холодного старта. Мы возвращаем системам способность работать там, где истории ещё нет.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
@@ -39,11 +39,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ЦИФРЫ ПРОЕКТА */}
+      {/* ЦИФРЫ ПРОЕКТА (Жестко заданная ширина 600px) */}
       <section className="w-full py-16 relative z-10">
-        <div className="w-full max-w-4xl mx-auto px-12 animate-rise" style={{ animationDelay: '0.1s' }}>
+        <div className="w-full max-w-2xl mx-auto px-6 animate-rise" style={{ animationDelay: '0.1s' }}>
           <h2 className="text-3xl font-black mb-10 text-white text-center">Цифры проекта</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card border-l-4 border-[#00d1b2]">
               <div className="text-4xl font-black text-[#00d1b2] mb-2 font-mono">0.548</div>
               <div className="text-sm text-[#94a3c4] font-bold uppercase tracking-wider">HR@10 на MovieLens-25M</div>
@@ -64,9 +64,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* АЛГОРИТМ */}
+      {/* АЛГОРИТМ (Жестко заданная ширина 700px) */}
       <section id="algorithm" className="w-full py-16 relative z-10">
-        <div className="w-full max-w-3xl mx-auto px-12 animate-rise" style={{ animationDelay: '0.2s' }}>
+        <div className="w-full max-w-3xl mx-auto px-6 animate-rise" style={{ animationDelay: '0.2s' }}>
           <h2 className="text-3xl font-black mb-10 text-white text-center">Как работает алгоритм</h2>
           <div className="glass-card mb-8 flex justify-center overflow-x-auto border border-[#26325a]">
             <Formula block latex={String.raw`s(u,i) = (1 - \gamma(u)) \cdot \langle u, e_i \rangle + \gamma(u) \cdot \frac{\log(1+\text{pop}_i)}{\max_{j \in I} \log(1+\text{pop}_j)}`} />
@@ -77,9 +77,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* РЕЗУЛЬТАТЫ */}
+      {/* РЕЗУЛЬТАТЫ (Жестко заданная ширина 700px) */}
       <section id="results" className="w-full py-16 relative z-10">
-        <div className="w-full max-w-3xl mx-auto px-12 animate-rise" style={{ animationDelay: '0.3s' }}>
+        <div className="w-full max-w-3xl mx-auto px-6 animate-rise" style={{ animationDelay: '0.3s' }}>
           <h2 className="text-3xl font-black mb-10 text-white text-center">Результаты</h2>
           
           <div className="glass-card overflow-hidden p-0 border border-[#26325a]">
@@ -107,9 +107,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA БЛОК */}
+      {/* CTA БЛОК (Жестко заданная ширина 600px) */}
       <section className="w-full py-20 relative z-10 animate-rise" style={{ animationDelay: '0.4s' }}>
-        <div className="w-full max-w-2xl mx-auto px-12 text-center">
+        <div className="w-full max-w-xl mx-auto px-6 text-center">
           <div className="glass-card">
             <h2 className="text-3xl font-black mb-4 text-white">Готовы попробовать SCIR?</h2>
             <p className="text-lg text-[#94a3c4] mb-8">Оставьте заявку на пилот или скачайте репозиторий</p>
@@ -125,16 +125,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ФОРМА */}
+      {/* ФОРМА (Жестко заданная ширина 500px) */}
       <section id="contact" className="w-full py-16 relative z-10 animate-rise" style={{ animationDelay: '0.5s' }}>
-        <div className="w-full max-w-2xl mx-auto px-12">
+        <div className="w-full max-w-lg mx-auto px-6">
           <B2BForm />
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="w-full bg-[#070b16]/80 border-t border-[#26325a] py-12 relative z-10 mt-auto">
-        <div className="max-w-4xl mx-auto px-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div className="max-w-2xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
           <div>
             <h4 className="text-[#00d1b2] font-black mb-3 text-xl tracking-widest flex items-center gap-2">
               <span className="text-xl">🦄</span> SCIR
