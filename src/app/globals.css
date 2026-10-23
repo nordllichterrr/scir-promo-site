@@ -22,12 +22,11 @@ a, a:visited { text-decoration: none !important; color: inherit; }
   animation: rise .6s ease forwards;
 }
 
-/* Карточки: жестко ограниченная ширина и внутренние отступы */
 .glass-card {
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
   border: 1px solid #26325a;
   border-radius: 16px;
-  padding: 32px; /* Большие внутренние отступы */
+  padding: 32px;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 .glass-card:hover {
