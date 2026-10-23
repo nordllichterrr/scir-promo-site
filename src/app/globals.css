@@ -1,14 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background-color: #e8ecf1 !important; 
-  color: #1B1F3B !important;
+  background: radial-gradient(1200px 600px at 15% -10%, #16204a 0%, #070b16 55%, #04060d 100%) !important;
+  color: #e9edff !important;
   margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
 }
 
-a, a:visited { text-decoration: none !important; }
+a, a:visited { text-decoration: none !important; color: inherit; }
+
+/* Стили для темных карточек */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+  border: 1px solid #26325a;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.glass-card:hover {
+  transform: translateX(6px);
+}

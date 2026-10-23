@@ -22,44 +22,34 @@ export default function B2BForm() {
   }
 
   return (
-    <div className="w-full">
-      <h2 className="text-2xl font-bold mb-8 text-[#1B1F3B] flex items-center gap-3">
-        <span className="w-1.5 h-7 bg-[#8B5CF6] rounded-full inline-block"></span>
-        Оставить заявку
+    <div className="w-full glass-card" style={{ cursor: 'default' }}>
+      <h2 className="text-xl font-bold mb-6 text-white flex items-center gap-3">
+        <span className="w-1.5 h-6 bg-[#00d1b2] rounded-full inline-block"></span>
+        Оставить заявку на пилот
       </h2>
-      {status === 'success' && <div className="bg-green-500 text-white p-4 rounded-lg mb-6 font-bold">Заявка отправлена!</div>}
+      {status === 'success' && <div className="bg-green-500/20 border border-green-500 text-green-300 p-4 rounded-lg mb-6 font-bold">Заявка отправлена!</div>}
       
-      <form onSubmit={handleSubmit} className="bg-[#F0F4F8] p-8 rounded-xl shadow-md border border-gray-200 text-[#1B1F3B]">
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-300 pb-6">
-            <label className="font-bold text-lg">Имя *</label>
-            <div className="md:col-span-2">
-              <input name="name" required className="w-full p-3 rounded-lg border border-gray-300 bg-white focus:border-[#8B5CF6] outline-none transition-colors" placeholder="Иван Иванов" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-300 pb-6">
-            <label className="font-bold text-lg">Компания *</label>
-            <div className="md:col-span-2">
-              <input name="company" required className="w-full p-3 rounded-lg border border-gray-300 bg-white focus:border-[#8B5CF6] outline-none transition-colors" placeholder="ООО Ромашка" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center border-b border-gray-300 pb-6">
-            <label className="font-bold text-lg">Email *</label>
-            <div className="md:col-span-2">
-              <input type="email" name="email" required className="w-full p-3 rounded-lg border border-gray-300 bg-white focus:border-[#8B5CF6] outline-none transition-colors" placeholder="ivan@company.com" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start border-b border-gray-300 pb-6">
-            <label className="font-bold text-lg mt-3">Сообщение *</label>
-            <div className="md:col-span-2">
-              <textarea name="message" required rows={4} className="w-full p-3 rounded-lg border border-gray-300 bg-white focus:border-[#8B5CF6] outline-none transition-colors" placeholder="Ваше сообщение..." />
-            </div>
-          </div>
-          <div className="flex justify-end pt-2">
-            <button type="submit" disabled={loading} className="bg-[#F0A6CA] text-[#1B1F3B] px-8 py-3 rounded-lg font-bold text-lg hover:bg-pink-400 transition shadow-md">
-              {loading ? 'Отправка...' : 'Отправить заявку'}
-            </button>
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <div>
+          <label className="block text-sm font-semibold text-[#94a3c4] mb-2">Имя *</label>
+          <input name="name" required className="w-full p-3 rounded-lg bg-[#0f1730] border border-[#26325a] text-white focus:border-[#00d1b2] outline-none transition-colors" placeholder="Иван Иванов" />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-[#94a3c4] mb-2">Компания *</label>
+          <input name="company" required className="w-full p-3 rounded-lg bg-[#0f1730] border border-[#26325a] text-white focus:border-[#00d1b2] outline-none transition-colors" placeholder="ООО Ромашка" />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-[#94a3c4] mb-2">Email *</label>
+          <input type="email" name="email" required className="w-full p-3 rounded-lg bg-[#0f1730] border border-[#26325a] text-white focus:border-[#00d1b2] outline-none transition-colors" placeholder="ivan@company.com" />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-[#94a3c4] mb-2">Сообщение *</label>
+          <textarea name="message" required rows={4} className="w-full p-3 rounded-lg bg-[#0f1730] border border-[#26325a] text-white focus:border-[#00d1b2] outline-none transition-colors" placeholder="Ваше сообщение..." />
+        </div>
+        <div className="pt-2">
+          <button type="submit" disabled={loading} className="w-full bg-[#00d1b2] text-[#070b16] py-3 rounded-lg font-bold text-lg hover:bg-[#00e5c3] transition shadow-[0_0_15px_rgba(0,209,178,0.3)]">
+            {loading ? 'Отправка...' : 'Отправить заявку'}
+          </button>
         </div>
       </form>
     </div>
