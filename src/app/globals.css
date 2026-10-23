@@ -33,3 +33,25 @@ a, a:visited { text-decoration: none !important; color: inherit; }
   transform: translateY(-4px);
   box-shadow: 0 18px 50px -18px #26325a;
 }
+
+/* ЖЕСТКО ЗАДАЕМ БЕЛЫЙ ЦВЕТ ТЕКСТА И ПЛЕЙСХОЛДЕРА ДЛЯ ВСЕХ ПОЛЕЙ */
+input, textarea {
+  color: #ffffff !important;
+  caret-color: #00d1b2 !important; /* Бирюзовый курсор */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #5b6a92 !important; /* Серый плейсхолдер */
+  opacity: 1 !important;
+}
+
+/* Убираем белый фон и стандартную обводку при автозаполнении в Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #0f1730 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
