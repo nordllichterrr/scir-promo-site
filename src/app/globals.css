@@ -22,6 +22,16 @@ a, a:visited { text-decoration: none !important; color: inherit; }
   animation: rise .6s ease forwards;
 }
 
+/* Правило 6.3: Учёт prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .glass-card {
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
   border: 1px solid #26325a;
@@ -34,24 +44,8 @@ a, a:visited { text-decoration: none !important; color: inherit; }
   box-shadow: 0 18px 50px -18px #26325a;
 }
 
-/* ЖЕСТКО ЗАДАЕМ БЕЛЫЙ ЦВЕТ ТЕКСТА И ПЛЕЙСХОЛДЕРА ДЛЯ ВСЕХ ПОЛЕЙ */
-input, textarea {
-  color: #ffffff !important;
-  caret-color: #00d1b2 !important; /* Бирюзовый курсор */
-}
-
-input::placeholder, textarea::placeholder {
-  color: #5b6a92 !important; /* Серый плейсхолдер */
-  opacity: 1 !important;
-}
-
-/* Убираем белый фон и стандартную обводку при автозаполнении в Chrome */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #0f1730 inset !important;
-  -webkit-text-fill-color: #ffffff !important;
-  transition: background-color 5000s ease-in-out 0s;
+/* Доступность: видимый фокус для клавиатуры */
+:focus-visible {
+  outline: 2px solid #00d1b2;
+  outline-offset: 4px;
 }
