@@ -10,3 +10,18 @@ db.sqlite3
 staticfiles/
 node_modules/
 .next/
+.worker-token
+media/
+.vercel
+.env*
+
+# Local backups and temporary test artifacts
+*.bak
+*.backup*
+test-results/
+playwright-report/
+tsconfig.tsbuildinfo
+
+# Backup copies with suffixes
+*.bak_*
+*-backup
