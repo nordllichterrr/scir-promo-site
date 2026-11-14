@@ -175,6 +175,18 @@ def worker_run_endpoint(request, run_id):
             return JsonResponse({"detail": "Run not found."}, status=404)
 
         fold = run.dataset_fold
+        fold_metadata = dict(fold.metadata or {})
+
+        if fold.dataset.slug == "serendipity":
+            fold_dir = f"data/processed/serendipity/fold_{fold.fold_index}"
+            fold_metadata.update({
+                "train_interactions_path": f"{fold_dir}/train_interactions.csv",
+                "validation_interactions_path": f"{fold_dir}/val_interactions.csv",
+                "test_interactions_path": f"{fold_dir}/test_interactions.csv",
+                "ground_truth_path": f"{fold_dir}/ground_truth.csv",
+                "split_metadata_path": f"{fold_dir}/fold_metadata.json",
+            })
+
         return JsonResponse({
             "id": str(run.pk),
             "experiment_id": str(run.experiment_id),
@@ -183,7 +195,7 @@ def worker_run_endpoint(request, run_id):
             "dataset_version": fold.dataset.version,
             "fold_index": fold.fold_index,
             "fold_split_seed": fold.split_seed,
-            "fold_metadata": fold.metadata,
+            "fold_metadata": fold_metadata,
             "config_snapshot": run.config_snapshot or {},
             "seed": run.seed,
             "split_seed": run.split_seed,
